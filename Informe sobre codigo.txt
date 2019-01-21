@@ -1,0 +1,26 @@
+¿Qué hace el código a simple vista?
+
+Lo que realiza el código a simple vista es actualizar los siguientes valores
+según pasan los días:
+
+- valor SellIn que denota la cantidad de días que tenemos para vender el artículo.
+- valor de calidad que denota lo valioso que es el artículo.
+
+¿Te parce un mal código?
+
+Sí que me parece un mal código. Especialmente llama la atención el método
+update_quality de la clase GildedRose .Es fácilmente detectable el code Smell
+llamado "Switch Statements"  que resalta por haber muchos "if" anidados lo que
+dificulta la legibilidad del código.
+
+¿Qué harías para mejorarlo? (especificando el orden de los pasos que seguirías)
+
+- Lo primero que haría sería intentar eliminar el problema del método updatequality 
+usando polimorfismo. Crearía clases  que extendieran la clase item ,eliminando el método 
+update_quality de la clase padre e implementándolo en las distintas clases hijas.
+
+-Despúes a la hora de implementar el método update_quality  en las clases hijas , crearía
+un método nuevo(también en las clases  hijas) para separar a funcionalidad de
+la actualización del valor Sellin que actualmente se hace en la misma clase
+
+- A continuación aplicaría refacotrización semántica para algunas variables y constantes.
