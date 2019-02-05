@@ -1,6 +1,12 @@
 <?php
 
-require_once 'gilded_rose.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+use Model\AgedBrieItem;
+use Model\BackstageItem;
+use Model\GildedRose;
+use Model\StandardItem;
+use Model\SulfurasItem;
 
 echo "OMGHAI!\n";
 
