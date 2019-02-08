@@ -6,26 +6,18 @@ class GildedRose {
 
 	private $items;
 
-	function __construct($items) {
+	public function __construct(array $items) {
 		$this->items = $items;
 	}
 
-	function updateQuality() {
+	public function updateQuality() {
 		foreach ($this->items as $item) {
 			$item->updateQualityItem();
 		}
 	}
-	function updateSellIn() {
+	public function updateSellIn() {
 		foreach ($this->items as $item) {
 			$item->updateSellInItem();
 		}
-	}
-}
-
-function isOutOfDate($sellDate) {
-	if ($sellDate <= 0) {
-		return true;
-	} else {
-		return false;
 	}
 }
