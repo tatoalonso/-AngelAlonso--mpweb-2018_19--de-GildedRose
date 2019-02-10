@@ -1,10 +1,10 @@
 <?php
 
-require_once __DIR__ . '/vendor/autoload.php';
+use GildedRose\GildedRose;
+use GildedRose\Item\FactoryItem;
+use GildedRose\Item\Item;
 
-use Model\FactoryItem;
-use Model\GildedRose;
-use Model\Item;
+require_once __DIR__ . '/vendor/autoload.php';
 
 echo "OMGHAI!\n";
 
@@ -18,7 +18,6 @@ $items = array(
 	FactoryItem::createItemByType((new Item('Backstage passes to a TAFKAL80ETC concert', 10, 49)), 'Backstage'),
 	FactoryItem::createItemByType((new Item('Backstage passes to a TAFKAL80ETC concert', 5, 49)), 'Backstage'),
 	FactoryItem::createItemByType((new Item('Conjured Mana Cake', 3, 6)), 'Conjured'),
-
 );
 
 $app = new GildedRose($items);
